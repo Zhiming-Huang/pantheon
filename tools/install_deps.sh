@@ -5,7 +5,7 @@ sudo add-apt-repository -y ppa:keithw/mahimahi
 sudo apt-get update
 
 # install required packages
-sudo apt-get -y install mahimahi ntp ntpdate texlive python-pip
+sudo apt-get -y install mahimahi ntp ntpdate texlive
 sudo pip install matplotlib numpy tabulate pyyaml
 
 # install pantheon tunnel
