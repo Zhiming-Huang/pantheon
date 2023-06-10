@@ -268,7 +268,7 @@ class Plot(object):
             max_mean_delay = max(x_mean, max_mean_delay)
 
             ax_mean.scatter(x_mean, y_mean, color=color, marker=marker,
-                            clip_on=False)
+                            clip_on=False, s=20)
             ax_mean.annotate(cc_name, (x_mean, y_mean))
 
         for fig_type, fig, ax in [('raw', fig_raw, ax_raw),
@@ -284,14 +284,14 @@ class Plot(object):
                 ax.set_ylim(bottom=0)
 
             xlabel = '95th percentile one-way delay (ms)'
-            ax.set_xlabel(xlabel, fontsize=12)
-            ax.set_ylabel('Average throughput (Mbit/s)', fontsize=12)
+            ax.set_xlabel(xlabel, fontsize=20)
+            ax.set_ylabel('Average throughput (Mbit/s)', fontsize=20)
             ax.grid()
 
         # save pantheon_summary.svg and .pdf
-        #ax_raw.set_title(self.expt_title.strip(), y=1.02, fontsize=12)
+        #ax_raw.set_title(self.expt_title.strip(), y=1.02, fontsize=20)
         lgd = ax_raw.legend(scatterpoints=1, bbox_to_anchor=(1, 0.5),
-                            loc='center left', fontsize=12)
+                            loc='center left', fontsize=20)
 
         for graph_format in ['svg', 'pdf']:
             raw_summary = path.join(
@@ -300,8 +300,7 @@ class Plot(object):
                             bbox_inches='tight', pad_inches=0.2)
 
         # save pantheon_summary_mean.svg and .pdf
-       # ax_mean.set_title(self.expt_title +
-                          ' (mean of all runs by scheme)', fontsize=12)
+       # ax_mean.set_title(self.expt_title +' (mean of all runs by scheme)', fontsize=20)
 
         for graph_format in ['svg', 'pdf']:
             mean_summary = path.join(
