@@ -289,7 +289,7 @@ class Plot(object):
             ax.grid()
 
         # save pantheon_summary.svg and .pdf
-        ax_raw.set_title(self.expt_title.strip(), y=1.02, fontsize=12)
+        #ax_raw.set_title(self.expt_title.strip(), y=1.02, fontsize=12)
         lgd = ax_raw.legend(scatterpoints=1, bbox_to_anchor=(1, 0.5),
                             loc='center left', fontsize=12)
 
@@ -300,7 +300,7 @@ class Plot(object):
                             bbox_inches='tight', pad_inches=0.2)
 
         # save pantheon_summary_mean.svg and .pdf
-        ax_mean.set_title(self.expt_title +
+       # ax_mean.set_title(self.expt_title +
                           ' (mean of all runs by scheme)', fontsize=12)
 
         for graph_format in ['svg', 'pdf']:
