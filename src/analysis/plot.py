@@ -268,7 +268,7 @@ class Plot(object):
             max_mean_delay = max(x_mean, max_mean_delay)
 
             ax_mean.scatter(x_mean, y_mean, color=color, marker=marker,
-                            clip_on=False, s=20)
+                            clip_on=False, s=100)
             ax_mean.annotate(cc_name, (x_mean, y_mean))
 
         for fig_type, fig, ax in [('raw', fig_raw, ax_raw),
