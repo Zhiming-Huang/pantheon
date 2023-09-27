@@ -1,6 +1,6 @@
 schemes:
   luc:
-    name: LUC
+    name: OMD-LCE-IX
     color: olive
     marker: 'o'
   cubic:

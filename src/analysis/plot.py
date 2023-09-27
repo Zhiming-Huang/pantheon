@@ -268,8 +268,8 @@ class Plot(object):
             max_mean_delay = max(x_mean, max_mean_delay)
 
             ax_mean.scatter(x_mean, y_mean, color=color, marker=marker,
-                            clip_on=False, s=100)
-            ax_mean.annotate(cc_name, (x_mean, y_mean))
+                            clip_on=False, s=200)
+            ax_mean.annotate(cc_name, (x_mean, y_mean), fontsize = 20)
 
         for fig_type, fig, ax in [('raw', fig_raw, ax_raw),
                                   ('mean', fig_mean, ax_mean)]:
@@ -280,6 +280,8 @@ class Plot(object):
             ax.invert_xaxis()
 
             yticks = ax.get_yticks()
+            ax.tick_params(axis='x', labelsize=20)
+            ax.tick_params(axis='y', labelsize=20)
             if yticks[0] < 0:
                 ax.set_ylim(bottom=0)
 
